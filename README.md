@@ -32,7 +32,17 @@ $ sh db/push.sh
 ```
 
 ## Details
-- These scripts assume each WordPress installation is being managed/deployed using Git. However, they can still be used without Git to simply import/export databases via the command-line by commenting out the git commands in `pull.sh` and `push.sh`.
+- These scripts assume each WordPress installation is being managed/deployed using Git. However, they can still be used without Git to simply import/export databases via the command-line by commenting out the git commands in `pull.sh` and `push.sh`. 
+- The scripts look for & create a database SQL file called `data.sql` in the `db/` directory.
+- While these scripts assume the database is backed up & managed via Git, the scripts themselves should be ignored from git (since they can contain sensitive information). 
+
+You can use the following pattern in your `.gitignore` file:
+```git
+!db/
+db/*
+!db/data.sql
+```
+This will include the `db/` directory itself, but ignore everything inside of it except for the `data.sql` file created during syncing.
 
 ## License
 [MIT](LICENSE) © Mike King yo@mikeking.io
