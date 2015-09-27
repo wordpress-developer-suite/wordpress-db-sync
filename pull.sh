@@ -3,7 +3,7 @@ echo 'Getting latest updates from git...';
 git pull
 
 # Update lines 6-7 with your database name, user name, and password
-echo 'Updating the our MySQL database...';
+echo 'Updating our MySQL database...';
 mysql --user='user' --password='password' db_name < ./db/data.sql
 mysql --user='user' --password='password' db_name < ./db/update.sql
 
