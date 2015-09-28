@@ -1,3 +1,4 @@
+# Update line 3 with your database name, user name, and password
 echo 'Exporting database from MySQL...';
 mysqldump --user='user' --password='password' db_name > ./db/data.sql
 
