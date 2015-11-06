@@ -1,4 +1,4 @@
-# Comment out the following 2 lines if not using git to sync database.
+# Comment out lines 2-3 if not using git to sync database.
 echo 'Getting latest updates from git...'; 
 git pull
 
